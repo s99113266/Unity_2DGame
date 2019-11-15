@@ -224,6 +224,8 @@ GameObject:
   - component: {fileID: 175815159}
   - component: {fileID: 175815158}
   - component: {fileID: 175815160}
+  - component: {fileID: 175815161}
+  - component: {fileID: 175815162}
   m_Layer: 0
   m_Name: TestObjct
   m_TagString: Untagged
@@ -268,11 +270,36 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175815157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e19f36203de2f0048b932294a594083a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &175815161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175815157}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad035883a129b664a9209cb1956231ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &175815162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175815157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7faed2f98a5fc2e40b45d74053c57b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _GodCarvingScript: {fileID: 1670063235}
 --- !u!1 &513270903
 GameObject:
   m_ObjectHideFlags: 0

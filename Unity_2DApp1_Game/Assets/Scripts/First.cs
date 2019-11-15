@@ -23,7 +23,7 @@ public class First : MonoBehaviour
     //大多在腳本或是遊戲一開始時執行一次
     private void Start()
     {
-        print("你好，世界!");
+        //print("你好，世界!");
     }
 
     private void Update()
