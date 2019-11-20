@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("最高紀錄")]
     public int Record;
 
+    [Header("水管預製物件")]
+    public GameObject Pipe;
+    
     /// <summary>
     /// 增加分數
     /// </summary>
@@ -32,5 +35,24 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    private void PipeProduce()
+    {
+        
+        Destroy(Instantiate(Pipe, new Vector3(Pipe.transform.position.x, Random.Range(-1.3f, 1.49f), 0), Quaternion.identity), 3.5f);
+    }
+
+    private void Start()
+    {
+        InvokeRepeating("PipeProduce", 0, 1.5f);
+        
+    }
+
+    private void Update()
+    {
+        
+    }
+
+
 
 }

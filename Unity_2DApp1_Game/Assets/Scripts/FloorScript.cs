@@ -6,13 +6,16 @@ public class FloorScript : MonoBehaviour
     public float floorScroll = 0.5f;  //滾動速度
     public Transform floorP;
 
+    /// <summary>
+    /// 地板滾動
+    /// </summary>
     private void Mobile()
     {
 
     }
 
-    private void Start()
+    private void Update()
     {
-        floorP.Translate(-floorScroll, 0, 0);
+        floorP.Translate(-floorScroll * Time.deltaTime, 0, 0);
     }
 }

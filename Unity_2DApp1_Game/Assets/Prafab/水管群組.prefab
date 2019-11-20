@@ -169,6 +169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7576336232135944394}
+  - component: {fileID: -2975453688139912137}
   m_Layer: 0
   m_Name: "\u6C34\u7BA1\u7FA4\u7D44"
   m_TagString: Untagged
@@ -184,7 +185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673217585758636174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.123, y: 0.22, z: -1.2988281}
+  m_LocalPosition: {x: 6, y: 0.22, z: -1.2988281}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2817455060762068066}
@@ -192,3 +193,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2975453688139912137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673217585758636174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a1003a67d7d02d4394a1613d8852a01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorScroll: 5
+  floorP: {fileID: 7576336232135944394}
