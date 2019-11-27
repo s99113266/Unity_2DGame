@@ -240,7 +240,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175815157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db56b378f5b0f48458d58533ffdb1633, type: 3}
   m_Name: 
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175815157}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7faed2f98a5fc2e40b45d74053c57b16, type: 3}
   m_Name: 
@@ -1374,7 +1374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1437748426
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1564,8 +1564,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433e5254c02fbb54f8cc7a8bcb4dcc87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 0
+  jumpHeight: -200
   Died: 0
+  Rig2DGodCarvingScript: {fileID: 1670063237}
+  goSraction: {fileID: 1437748425}
+  goGM: {fileID: 1745962448}
 --- !u!58 &1670063236
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1597,7 +1600,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1619,7 +1622,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1745962449
 MonoBehaviour:
   m_ObjectHideFlags: 0

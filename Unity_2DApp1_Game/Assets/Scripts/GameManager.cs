@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("PipeProduce", 0, 1.5f);
+        InvokeRepeating("PipeProduce", 0, 2.5f);
         
     }
 

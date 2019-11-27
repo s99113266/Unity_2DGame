@@ -3,11 +3,15 @@
 public class GodCarvingScript : MonoBehaviour
 {
     [Header("跳躍高度")]
-    [Range(50,2000)]
-    public int jumpHeight = 0;
+    [Range(-50,-2000)]
+    public int jumpHeight = -100;
 
     [Header("是否死亡")]
     public bool Died = false;
+
+    public Rigidbody2D Rig2DGodCarvingScript;
+
+    public GameObject goSraction, goGM;
 
     /// <summary>
     /// 是否功過水管的狀態
@@ -22,9 +26,26 @@ public class GodCarvingScript : MonoBehaviour
     /// <summary>
     /// 跳躍
     /// </summary>
-    private void IsJump()
+    private void IsJump(int IsJumpInt = -150)
     {
+        if (!Died)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                goSraction.SetActive(true);
+                goGM.SetActive(true);
+                Rig2DGodCarvingScript.Sleep();
+                Rig2DGodCarvingScript.gravityScale = -1f;
+                Rig2DGodCarvingScript.AddForce(new Vector2(0, IsJumpInt) * 1);
 
+
+            }
+            Rig2DGodCarvingScript.SetRotation(10 * Rig2DGodCarvingScript.velocity.y);
+        }
+        else
+        {
+            Rig2DGodCarvingScript.gravityScale = 1f;
+        }
     }
 
     /// <summary>
@@ -32,11 +53,23 @@ public class GodCarvingScript : MonoBehaviour
     /// </summary>
     private void IsDied()
     {
-
+        Died = true;
     }
 
     private void Update()
     {
-        
+        IsJump(jumpHeight);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision.gameObject.name);
+        IsDied();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        IsDied();
+    }
+
 }

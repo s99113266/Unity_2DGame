@@ -8,6 +8,6 @@ public class APITest : MonoBehaviour
     void Start()
     {
         _GodCarvingScript.jumpHeight = 999;
-        print(_GodCarvingScript.jumpHeight);
+        //print(_GodCarvingScript.jumpHeight);
     }
 }
