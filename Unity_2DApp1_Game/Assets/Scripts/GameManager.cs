@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [Header("選單介面")]
     public GameObject EndGame;
 
+    [Header("文字輸出")]
     public Text fractionText, RecordText;
 
     /// <summary>
@@ -31,7 +32,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void HighestRecord()
     {
-        if (fraction > Record) Record = fraction;
+        if (fraction > Record)
+        {
+            Record = fraction;
+            RecordText.text = "" + Record;
+        }
     }
 
     /// <summary>

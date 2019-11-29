@@ -16,6 +16,12 @@ public class GodCarvingScript : MonoBehaviour
     [Header("遊戲管理器")]
     public GameManager gm;
 
+
+    [Header("音效來源")]
+    public AudioSource aud;
+
+    [Header("音效輸出")]
+    public AudioClip AcJump, AcDied, AcOk;
     /// <summary>
     /// 是否功過水管的狀態
     /// </summary>
@@ -37,6 +43,7 @@ public class GodCarvingScript : MonoBehaviour
             {
                 goSraction.SetActive(true);
                 goGM.SetActive(true);
+                aud.PlayOneShot(AcJump,15);
                 Rig2DGodCarvingScript.Sleep();
                 Rig2DGodCarvingScript.gravityScale = -1f;
                 Rig2DGodCarvingScript.AddForce(new Vector2(0, IsJumpInt) * 1);
@@ -59,6 +66,7 @@ public class GodCarvingScript : MonoBehaviour
         Died = true;
         gm.GameEnd();
         FloorScript.floorScroll = 0;
+        aud.PlayOneShot(AcDied, 15);
     }
 
     private void Update()
@@ -79,6 +87,7 @@ public class GodCarvingScript : MonoBehaviour
         }
         else
         {
+            aud.PlayOneShot(AcOk, 15);
             gm.AddFraction();
         }
         
