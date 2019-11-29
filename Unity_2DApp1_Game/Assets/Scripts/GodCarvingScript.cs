@@ -13,6 +13,9 @@ public class GodCarvingScript : MonoBehaviour
 
     public GameObject goSraction, goGM;
 
+    [Header("遊戲管理器")]
+    public GameManager gm;
+
     /// <summary>
     /// 是否功過水管的狀態
     /// </summary>
@@ -54,6 +57,8 @@ public class GodCarvingScript : MonoBehaviour
     private void IsDied()
     {
         Died = true;
+        gm.GameEnd();
+        FloorScript.floorScroll = 0;
     }
 
     private void Update()
@@ -63,13 +68,20 @@ public class GodCarvingScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
         IsDied();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        IsDied();
+        if(collision.gameObject.name != "通過")
+        {
+            IsDied();
+        }
+        else
+        {
+            gm.AddFraction();
+        }
+        
     }
 
 }

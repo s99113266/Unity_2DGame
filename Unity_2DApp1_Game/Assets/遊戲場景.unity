@@ -781,7 +781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d67bd975ddb7bb459e7464ac87ec5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorScroll: 5
   floorP: {fileID: 1146362959}
 --- !u!61 &1146362961
 BoxCollider2D:
@@ -878,7 +877,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 0
 --- !u!222 &1150827616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1569,6 +1568,7 @@ MonoBehaviour:
   Rig2DGodCarvingScript: {fileID: 1670063237}
   goSraction: {fileID: 1437748425}
   goGM: {fileID: 1745962448}
+  gm: {fileID: 1745962449}
 --- !u!58 &1670063236
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1638,6 +1638,9 @@ MonoBehaviour:
   fraction: 0
   Record: 0
   Pipe: {fileID: 8673217585758636174, guid: d15ad75c32a96ae4581d208d93ade6d4, type: 3}
+  EndGame: {fileID: 513270903}
+  fractionText: {fileID: 1437748427}
+  RecordText: {fileID: 1150827615}
 --- !u!4 &1745962450
 Transform:
   m_ObjectHideFlags: 0
