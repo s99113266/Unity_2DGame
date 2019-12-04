@@ -69,6 +69,11 @@ public class GodCarvingScript : MonoBehaviour
         aud.PlayOneShot(AcDied, 15);
     }
 
+    private void Start()
+    {
+        Screen.SetResolution(460,800,false);
+    }
+
     private void Update()
     {
         IsJump(jumpHeight);

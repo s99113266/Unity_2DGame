@@ -5,5 +5,4 @@ public class PipeScript : FloorScript
     {
         Destroy(gameObject, 3.5f);
     }
-    
 }

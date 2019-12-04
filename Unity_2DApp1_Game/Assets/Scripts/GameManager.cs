@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [Header("起始分數")]
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     [Header("選單介面")]
     public GameObject EndGame;
 
-    [Header("文字輸出")]
+    [Header("分數")]
     public Text fractionText, RecordText;
 
     /// <summary>
@@ -25,6 +26,16 @@ public class GameManager : MonoBehaviour
     {
         fraction += Add;
         fractionText.text = "" + fraction;
+        HighestRecord();
+        switch (fraction)
+        {
+            case 20:
+                FloorScript.floorScroll = 3.5f;
+                break;
+            case 40:
+                FloorScript.floorScroll = 4f;
+                break;
+        }
     }
 
     /// <summary>
@@ -34,8 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if (fraction > Record)
         {
-            Record = fraction;
-            RecordText.text = "" + Record;
+            PlayerPrefs.SetInt("分數紀錄", fraction);
         }
     }
 
@@ -46,8 +56,6 @@ public class GameManager : MonoBehaviour
     {
         EndGame.SetActive(true);
         CancelInvoke("PipeProduce");
-        HighestRecord();
-
     }
 
     private void PipeProduce()
@@ -56,10 +64,31 @@ public class GameManager : MonoBehaviour
         Instantiate(Pipe, new Vector3(Pipe.transform.position.x, Random.Range(-1.3f, 1.49f), 0), Quaternion.identity);
     }
 
+
+    /// <summary>
+    /// 重新開始遊戲
+    /// </summary>
+    public void ResetGame()
+    {
+        print("1");
+        SceneManager.LoadScene("遊戲場景");
+    }
+
+    /// <summary>
+    /// 離開遊戲
+    /// </summary>
+    public void ExitGame()
+    {
+        print("2");
+        Application.Quit();
+    }
+
     private void Start()
     {
         InvokeRepeating("PipeProduce", 0, 2.5f);
-        
+        Record = PlayerPrefs.GetInt("分數紀錄");
+        RecordText.text = "" + Record;
+
     }
 
     private void Update()

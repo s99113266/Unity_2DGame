@@ -9,9 +9,9 @@ public class FloorScript : MonoBehaviour
     /// <summary>
     /// 地板滾動
     /// </summary>
-    private void Mobile()
+    private void Start()
     {
-
+        floorScroll = 3f;
     }
 
     private void Update()
