@@ -71,7 +71,7 @@ public class GodCarvingScript : MonoBehaviour
 
     private void Start()
     {
-        Screen.SetResolution(460,800,false);
+        Screen.SetResolution(450,800,false);
     }
 
     private void Update()
